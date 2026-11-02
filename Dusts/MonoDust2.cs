@@ -6,7 +6,7 @@ namespace ArsenalLabsBeta.Dusts
 {
     public class MonoDust2 : ModDust
     {
-        public override string Texture => CatalystHelpers.GetPath<MonoDust>();
+        public override string Texture => ArsenalLabsHelpers.GetPath<MonoDust>();
 
         public override void OnSpawn(Dust dust)
         {

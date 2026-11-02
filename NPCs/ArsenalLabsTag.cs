@@ -8,7 +8,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ArsenalLabsBeta.Projectiles.Summon.Whips.Arsenal;
+using ArsenalLabsBeta.Items.Weapons.ArsenalWhip;
 
 namespace ArsenalLabsBeta.NPCs
 {

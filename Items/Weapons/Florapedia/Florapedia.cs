@@ -12,7 +12,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ArsenalLabsBeta.Items.Weapons.Magic
+namespace ArsenalLabsBeta.Items.Weapons.Florapedia
 {
     public class Florapedia : BaseHoldOutProjItem
     {

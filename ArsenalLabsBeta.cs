@@ -20,10 +20,15 @@ namespace ArsenalLabsBeta
 
 		public static RogueDamageClass Rogue => ModContent.GetInstance<RogueDamageClass>();
 
+		public static DateTime dateTime;
+        public static bool AprilFools;
+
 		public override void Load()
 		{
 			Instance = ModContent.GetInstance<ArsenalLabsBeta>();
 			Calamity = ModContent.GetInstance<CalamityMod.CalamityMod>();
+
+			AprilFools = dateTime.Month == 4 && dateTime.Day == 1;
 		}
 
 		public static SoundStyle GetSound(string name)

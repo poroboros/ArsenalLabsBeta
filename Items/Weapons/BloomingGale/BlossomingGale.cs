@@ -1,9 +1,9 @@
 ﻿using CalamityMod;
 using CalamityMod.Items;
 using CalamityMod.Rarities;
-using ArsenalLabsBeta.Projectiles.Melee;
 using Terraria.ID;
 using Terraria.ModLoader;
+using ArsenalLabsBeta.Items.Weapons.BloomingGale;
 
 namespace ArsenalLabsBeta.Items.Weapons.Melee
 {

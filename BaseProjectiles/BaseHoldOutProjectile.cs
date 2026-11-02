@@ -70,8 +70,8 @@ namespace ArsenalLabsBeta.Projectiles.BaseProjectiles
             Vector2 target = Main.MouseWorld;
             Vector2 aim = target - center;
             float length = (center - target).Length();
-            float radius = offset.Y.Abs();
-            if (aim.X.Abs() < 2 * radius || radius == 0)
+            float radius = Math.Abs(offset.Y);
+            if (Math.Abs(aim.X) < 2 * radius || radius == 0)
                 return false;
             float theta = aim.ToRotation();
             float phi = MathF.Acos(radius / length);

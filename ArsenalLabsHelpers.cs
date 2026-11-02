@@ -22,7 +22,21 @@ namespace ArsenalLabsBeta
             return GetPath(typeof(T));
         }
 
-        
+        public static int Abs(this int value)
+        {
+            return value >= 0 ? value : value * -1;
+        }
+
+        public static float Abs(this float value)
+        {
+            return value >= 0 ? value : value * -1f;
+        }
+
+
+        public static Item ActiveItem(this Player player)
+        {
+            return player.HeldItem;
+        }
         
         public static ArsenalLabsPlayer ArsenalLabs(this Player Player)
         {

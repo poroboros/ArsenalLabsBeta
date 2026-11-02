@@ -25,6 +25,10 @@ namespace ArsenalLabsBeta
     public class ArsenalLabsPlayer : ModPlayer
     {
         public static int ArsenalWhipHitCount;
+        public bool aperCore;
+        public bool spelunkChip;
+        public bool hasFlashlight;
+
         public Dictionary<int, int> projectileCooldowns = new Dictionary<int, int>();
 
 

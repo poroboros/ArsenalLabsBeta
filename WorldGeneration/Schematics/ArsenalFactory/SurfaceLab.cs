@@ -1,5 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using ArsenalLabsBeta.Items.Ammo.Lens;
+using ArsenalLabsBeta.Items.Mounts;
+using ArsenalLabsBeta.Items.Weapons.ArsenalWhip;
+using ArsenalLabsBeta.Items.Weapons.Bloomhammer;
+using ArsenalLabsBeta.Items.Weapons.Florapedia;
+using ArsenalLabsBeta.Items.Weapons.Melee;
+using ArsenalLabsBeta.Items.Weapons.Ranged.Repeaters;
 using CalamityMod;
 using CalamityMod.Items.Accessories.Vanity;
 using CalamityMod.Items.DraedonMisc;
