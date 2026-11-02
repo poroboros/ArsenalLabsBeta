@@ -1,0 +1,3 @@
+displayName = Arsenal Labs: Catalyst Beta Content
+author = Catalyst Dev Team
+version = 0.1

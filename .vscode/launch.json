@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch tModLoader (Linux Debug)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "/usr/bin/dotnet",
+            "args": [
+                "${env:HOME}/.steam/steam/steamapps/common/tModLoader/tModLoader.dll",
+                "-nosteam", 
+                "/gldevice:Vulkan"
+            ],
+            "cwd": "${env:HOME}/.steam/steam/steamapps/common/tModLoader",
+            "stopOnEntry": false,
+            "console": "internalConsole",
+            "justMyCode": true,
+            "symbolOptions": {
+                "searchPaths": [],
+                "searchMicrosoftSymbolServer": false,
+                "searchNuGetOrgSymbolServer": false
+            },
+            "env": {
+                "LD_LIBRARY_PATH": "${env:HOME}/.steam/steam/steamapps/common/tModLoader/lib64:${env:LD_LIBRARY_PATH}",
+                "FNA_AUDIO_DISABLE_SOUND": "0" 
+            },
+
+        }
+    ]
+}
