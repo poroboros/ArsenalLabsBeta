@@ -10,7 +10,9 @@
 
 	<!-- References -->
 	<ItemGroup>
-		
+	  <Reference Include="CalamityMod">
+	    <HintPath>..\ModAssemblies\CalamityMod_v2.2.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 
 </Project>
