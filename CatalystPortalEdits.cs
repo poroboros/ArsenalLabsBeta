@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using CalamityMod;
-using ArsenalLabsBeta.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using ReLogic.Utilities;
 using Terraria;

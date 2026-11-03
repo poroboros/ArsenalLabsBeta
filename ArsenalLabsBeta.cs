@@ -35,5 +35,16 @@ namespace ArsenalLabsBeta
         {
             return new SoundStyle(SoundsPath + name);
         }
+
+		public override void PostSetupContent()
+		{
+
+			//Glow texture system for more accurate glow colors per tile
+            GlowTextureSystem.RegisterTexture("ArsenalLabsBeta/Tiles/Astrogel");
+            GlowTextureSystem.RegisterTexture("ArsenalLabsBeta/Tiles/Ores/MetanovaOre");
+            GlowTextureSystem.RegisterTexture("ArsenalLabsBeta/Tiles/MetanovaPolishedBrick");
+            GlowTextureSystem.RegisterTexture("ArsenalLabsBeta/Tiles/BrassLabPanel");
+            GlowTextureSystem.RegisterTexture("ArsenalLabsBeta/Tiles/Plates/Vernalplate");
+		}
 	}
 }

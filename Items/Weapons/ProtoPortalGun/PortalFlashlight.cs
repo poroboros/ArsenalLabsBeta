@@ -1,14 +1,17 @@
-﻿using ArsenalLabsBeta.Items.Weapons.Typeless;
+﻿using ArsenalLabsBeta.Items.Flashlight;
 using Terraria.ModLoader;
 
-namespace ArsenalLabsBeta.Projectiles.Typeless;
-
-public class PortalFlashlight : FlashlightConeFriendly
+namespace ArsenalLabsBeta.Items.Weapons.ProtoPortalGun
 {
-    public override void SetDefaults()
+
+
+    public class PortalFlashlight : FlashlightConeFriendly
     {
-        itemOwnerType = ModContent.ItemType<ProtoPortalGun>();
-        holdoutOffset = 55;
-        base.SetDefaults();
+        public override void SetDefaults()
+        {
+            itemOwnerType = ModContent.ItemType<ProtoPortalGun>();
+            holdoutOffset = 55;
+            base.SetDefaults();
+        }
     }
 }

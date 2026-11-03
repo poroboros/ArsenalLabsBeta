@@ -12,6 +12,8 @@ namespace ArsenalLabsBeta
 {
     public static class ArsenalLabsHelpers
     {    
+
+        public static Color FurnitureColor => new Color(191, 142, 111);
         public static string GetPath(this object o)
         {
             return GetPath(o.GetType());
