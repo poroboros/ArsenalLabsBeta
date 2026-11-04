@@ -6,6 +6,7 @@ using ArsenalLabsBeta.Items.Weapons.ArsenalWhip;
 using ArsenalLabsBeta.Items.Weapons.Bloomhammer;
 using ArsenalLabsBeta.Items.Weapons.Florapedia;
 using ArsenalLabsBeta.Items.Weapons.Melee;
+using ArsenalLabsBeta.Items.Weapons.ProtoPortalGun;
 using ArsenalLabsBeta.Items.Weapons.Ranged.Repeaters;
 using CalamityMod;
 using CalamityMod.Items.Accessories.Vanity;

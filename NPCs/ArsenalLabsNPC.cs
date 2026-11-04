@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using ArsenalLabsBeta;
+using ArsenalLabsBeta.Events.ArsenalTrial;
 using CalamityMod;
 using CalamityMod.NPCs.Abyss;
 using CalamityMod.NPCs.AcidRain;
@@ -203,6 +204,19 @@ namespace ArsenalLabsBeta.NPCs
             return target;
         }
 
+        public override void PostAI(NPC npc)
+        {
+            if (npc.type == ModContent.NPCType<WulfrumAmplifier>()) //Runs amplifier for custom enemies
+            {
+                WulfrumAmplifier amp = npc.ModNPC as WulfrumAmplifier;
+
+                if (amp.Charging)
+                {
+                    MimicWulfrumAmplifier(amp.NPC, amp.ChargeRadius);
+                }
+            }
+        }
+
         public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
         {
             var Player = spawnInfo.Player;
@@ -211,25 +225,62 @@ namespace ArsenalLabsBeta.NPCs
 
 
             //arsenal event spawning
-            // if (arsenal.ZoneArsenal)
-            // {
-            //     pool.Clear();
-            //     // pool.Add(ModContent.NPCType<DisposalUnitNaturalSpawn>(), .8f);
+            if (arsenal.ZoneArsenal)
+            {
+                pool.Clear();
+                // pool.Add(ModContent.NPCType<DisposalUnitNaturalSpawn>(), .8f);
 
-            // }
+            }
 
 
         }
 
 
+        public static void MimicWulfrumAmplifier(NPC self, float ChargeRadius, int dustType = DustID.Electric, float chargeTime = 720f)
+        {
+            for (int index1 = 0; index1 < 200; ++index1)
+            {
+                NPC npc = Main.npc[index1];
+                if (npc.active && npc.ModNPC is SuperChargeEnemy)
+                {
+                    SuperChargeEnemy charged = npc.ModNPC as SuperChargeEnemy;
+                    if (self.Distance(((Entity)npc).Center) <= ChargeRadius && !charged.Supercharged)
+                    {
+                        // charged.SuperchargeTimer = chargeTime;
+                        // if (charged.Type == ModContent.NPCType<WulfrumMine>())
+                        // {
+                        //     charged.SuperchargeTimer += 720f; ;
+                        // }
+                        charged.NPC.netUpdate = true;
+                        if (!Main.dedServ)
+                        {
+                            for (int index2 = 0; index2 < 10; ++index2)
+                                Dust.NewDust(charged.NPC.position, charged.NPC.width, charged.NPC.height, dustType, 0.0f, 0.0f, 0, new Color(), .65f);
+                        }
+                    }
+                }
+                if (npc.type == ModContent.NPCType<WulfrumGyrator>() || npc.type == ModContent.NPCType<WulfrumDrone>() || npc.type == ModContent.NPCType<WulfrumRover>() || npc.type == ModContent.NPCType<WulfrumHovercraft>())
+                {
+                    if (self.Distance(((Entity)npc).Center) <= ChargeRadius && npc.ai[3] <= 0.0)
+                    {
+                        npc.ai[3] = 720f;
+                        npc.netUpdate = true;
+                        if (!Main.dedServ)
+                        {
+                            for (int index2 = 0; index2 < 10; ++index2)
+                                Dust.NewDust(((Entity)npc).position, ((Entity)npc).width, ((Entity)npc).height, DustID.Electric, 0.0f, 0.0f, 0, new Color(), 1f);
+                        }
+                    }
+                }
+            }
+        }
 
 
-
-        // public override void OnKill(NPC npc)
-        // {
-        //     if (ArsenalFactoryCombatTrial.TrialActive)
-        //         ArsenalFactoryCombatTrial.OnEnemyKill(npc);
-        //     ;
-        // }
+        public override void OnKill(NPC npc)
+        {
+            if (ArsenalFactoryCombatTrial.TrialActive)
+                ArsenalFactoryCombatTrial.OnEnemyKill(npc);
+            ;
+        }
     }
 }

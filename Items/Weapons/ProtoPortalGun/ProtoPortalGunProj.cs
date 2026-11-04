@@ -10,7 +10,7 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace ArsenalLabsBeta.Projectiles.ProtoPortalGun
+namespace ArsenalLabsBeta.Items.Weapons.ProtoPortalGun
 {
     public class ProtoPortalGunProj : BaseHoldOutShooterProjectile
     {

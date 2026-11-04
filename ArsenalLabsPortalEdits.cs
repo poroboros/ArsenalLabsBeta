@@ -7,7 +7,8 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ArsenalLabsBeta.Projectiles.ProtoPortalGun;
+using ArsenalLabsBeta.Items.Weapons.ProtoPortalGun;
+using ArsenalLabsBeta.Items.Tiles.PuzzleElements;
 
 namespace ArsenalLabsBeta
 {

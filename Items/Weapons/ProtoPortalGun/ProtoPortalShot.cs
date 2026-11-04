@@ -8,7 +8,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ArsenalLabsBeta.Projectiles.ProtoPortalGun
+namespace ArsenalLabsBeta.Items.Weapons.ProtoPortalGun
 {
 
 

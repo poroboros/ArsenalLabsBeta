@@ -1,4 +1,5 @@
 ﻿using ArsenalLabsBeta.Items.Weapons;
+using ArsenalLabsBeta.Items.Weapons.ProtoPortalGun;
 using ArsenalLabsBeta.Tiles;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;

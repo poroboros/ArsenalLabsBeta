@@ -18,6 +18,7 @@ using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
+using ArsenalLabsBeta.Biomes;
 
 
 namespace ArsenalLabsBeta
@@ -28,6 +29,8 @@ namespace ArsenalLabsBeta
         public bool aperCore;
         public bool spelunkChip;
         public bool hasFlashlight;
+
+        public bool ZoneArsenal => Player.InModBiome(ModContent.GetInstance<ArsenalFactoryBiome>());
 
         public Dictionary<int, int> projectileCooldowns = new Dictionary<int, int>();
 

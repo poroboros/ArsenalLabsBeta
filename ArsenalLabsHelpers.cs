@@ -5,6 +5,8 @@ using CalamityMod;
 using CalamityMod.Items;
 using Terraria;
 using Terraria.GameContent;
+using Terraria.ID;
+using Terraria.Audio;
 
 
 
@@ -14,6 +16,8 @@ namespace ArsenalLabsBeta
     {    
 
         public static Color FurnitureColor => new Color(191, 142, 111);
+
+        public static Vector2 TileDrawOffset => Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
         public static string GetPath(this object o)
         {
             return GetPath(o.GetType());
@@ -43,6 +47,32 @@ namespace ArsenalLabsBeta
         public static ArsenalLabsPlayer ArsenalLabs(this Player Player)
         {
             return Player.GetModPlayer<ArsenalLabsPlayer>();
+        }
+
+        public static void Slope(this Tile tile, byte value)
+        {
+            tile.Slope = (SlopeType)value;
+        }
+        public static void HalfBrick(this Tile tile, bool value)
+        {
+            tile.IsHalfBlock = value;
+        }
+        public static void Active(this Tile tile, bool value)
+        {
+            tile.HasTile = value;
+        }
+
+        public static SoundStyle WithVolume(this SoundStyle soundStyle, float volume)
+        {
+            var value = soundStyle;
+            value.Volume = volume;
+            return value;
+        }
+        public static SoundStyle WithPitch(this SoundStyle soundStyle, float pitch)
+        {
+            var value = soundStyle;
+            value.PitchRange = (pitch, pitch);
+            return value;
         }
 
         /// <summary>

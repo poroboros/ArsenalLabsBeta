@@ -4,7 +4,7 @@ using CalamityMod;
 using CalamityMod.Events;
 using CalamityMod.Schematics;
 using ArsenalLabsBeta.Biomes;
-using ArsenalLabsBeta.Items.Placeable.PuzzleElements;
+using ArsenalLabsBeta.Items.Tiles.PuzzleElements;
 using ArsenalLabsBeta.NPCs.Arsenal;
 using ArsenalLabsBeta.NPCs.Arsenal.Miniboss;
 using ArsenalLabsBeta.WorldGeneration.Schematics.ArsenalFactory;
@@ -13,7 +13,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using EnemyWaveSpawner = ArsenalLabsBeta.Tiles.PuzzleElements.EnemyWaveSpawner;
+using EnemyWaveSpawner = ArsenalLabsBeta.Items.Tiles.PuzzleElements.EnemyWaveSpawner;
 
 namespace ArsenalLabsBeta.Events.ArsenalTrial;
 

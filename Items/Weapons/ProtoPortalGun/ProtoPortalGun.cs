@@ -1,11 +1,10 @@
-﻿using ArsenalLabsBeta.Projectiles.ProtoPortalGun;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ArsenalLabsBeta.Items.Weapons
+namespace ArsenalLabsBeta.Items.Weapons.ProtoPortalGun
 {
     public class ProtoPortalGun : ModItem
     {

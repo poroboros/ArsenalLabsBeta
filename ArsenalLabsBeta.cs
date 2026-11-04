@@ -16,6 +16,8 @@ namespace ArsenalLabsBeta
 		public const string AssetsPath = "ArsenalLabsBeta/Assets/";
 		public const string SoundsPath = AssetsPath + "Sounds/";
         public static ArsenalLabsBeta Instance { get; private set; }
+
+		public static Mod CalamityMusic { get; private set; }
         public static CalamityMod.CalamityMod Calamity { get; private set; }
 
 		public static RogueDamageClass Rogue => ModContent.GetInstance<RogueDamageClass>();
@@ -39,6 +41,10 @@ namespace ArsenalLabsBeta
 		public override void PostSetupContent()
 		{
 
+			if (ModLoader.TryGetMod("CalamityModMusic", out var music))
+            {
+                CalamityMusic = music;
+            }
 			//Glow texture system for more accurate glow colors per tile
             GlowTextureSystem.RegisterTexture("ArsenalLabsBeta/Tiles/Astrogel");
             GlowTextureSystem.RegisterTexture("ArsenalLabsBeta/Tiles/Ores/MetanovaOre");

@@ -32,7 +32,7 @@ namespace ArsenalLabsBeta.Items.Tiles.PuzzleElements
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16 };
             TileObjectData.addTile(Type);
-            AddMapEntry(CatalystHelpers.FurnitureColor, CreateMapEntryName());
+            AddMapEntry(ArsenalLabsHelpers.FurnitureColor, CreateMapEntryName());
 
             AnimationFrameHeight = 54;
         }

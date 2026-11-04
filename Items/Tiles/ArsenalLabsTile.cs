@@ -48,7 +48,7 @@ namespace ArsenalLabsBeta.Tiles
 
             var effects = SpriteEffects.None;
             TileLoader.SetSpriteEffects(i, j, modTile.Type, ref effects);
-            var drawPosition = new Vector2(i * 16 - Main.screenPosition.X, j * 16 - Main.screenPosition.Y) + CatalystHelpers.TileDrawOffset;
+            var drawPosition = new Vector2(i * 16 - Main.screenPosition.X, j * 16 - Main.screenPosition.Y) + ArsenalLabsHelpers.TileDrawOffset;
             if (effects.HasFlag(SpriteEffects.FlipHorizontally))
             {
                 drawPosition.X += horizontalFlipXOffset;
@@ -165,6 +165,11 @@ namespace ArsenalLabsBeta.Tiles
                     break;
             }
             return tileWorldCoordinate;
+        }
+
+        public void PostSetupContent(ArsenalLabsBeta arslab)
+        {
+            throw new NotImplementedException();
         }
     }
 }
